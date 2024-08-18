@@ -1,0 +1,41 @@
+﻿@model CRUD.Models.SaranModel
+
+@{
+    ViewData["Title"] = "Detail Saran";
+}
+
+<h1>Detail Saran</h1>
+
+<div>
+    <h4>SaranModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nama)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nama)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Alamat)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Alamat)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Pesan)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pesan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TanggalDikirim)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TanggalDikirim)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

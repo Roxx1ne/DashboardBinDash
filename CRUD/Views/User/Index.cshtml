@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CRUD.ViewModels.UserVM>
+
+<section class="container py-5">
+    <h3 class="text-center font-weight-bold mb-4" style="color: #343a40; position: relative; margin-bottom: 30px;">
+        <span style="background-color: #f8f9fa; padding: 0 10px; z-index: 1; position: relative;">Daftar Pengguna</span>
+        <div style="background-color: #6c757d; height: 4px; width: 60px; margin: 0 auto; position: absolute; bottom: -10px; left: 0; right: 0; border-radius: 2px;"></div>
+    </h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>@user.Role</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@user.Id" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
+<section id="dashboardSection" class="container py-5">
+    <h3 class="text-center font-weight-bold mb-4" style="color: #343a40; position: relative; margin-bottom: 30px;">
+        <span style="background-color: #f8f9fa; padding: 0 10px; z-index: 1; position: relative;">Input Data Sampah</span>
+        <div style="background-color: #6c757d; height: 4px; width: 60px; margin: 0 auto; position: absolute; bottom: -10px; left: 0; right: 0; border-radius: 2px;"></div>
+    </h3>
+    <div class="d-flex justify-content-center">
+        <div class="iframe-container">
+            <iframe width="700px" height="700px" src="https://apps.powerapps.com/play/e/9d2644a0-dac8-e018-aa6a-d1baca72918d/a/f1f3e486-3ef5-490d-afc6-215a75681423?tenantId=d7b95ec4-9a7f-4260-b2e3-eb53f0ac8401&sourcetime=1723708546434" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>

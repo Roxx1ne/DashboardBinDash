@@ -1,0 +1,35 @@
+﻿@model CRUD.Models.SaranModel
+
+@{
+    ViewData["Title"] = "Edit Saran Anda";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="Nama" class="control-label"></label>
+        <input asp-for="Nama" class="form-control" />
+        <span asp-validation-for="Nama" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Alamat" class="control-label"></label>
+        <input asp-for="Alamat" class="form-control" />
+        <span asp-validation-for="Alamat" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Pesan" class="control-label"></label>
+        <textarea asp-for="Pesan" class="form-control"></textarea>
+        <span asp-validation-for="Pesan" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Simpan" class="btn btn-primary" />
+    </div>
+</form>
+
+<a href="@Url.Action("Index", "Saran")">Kembali ke Daftar Saran</a>
